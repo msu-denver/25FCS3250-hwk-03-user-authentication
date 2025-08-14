@@ -104,7 +104,7 @@ def load_user(id):
 
 The sign-up feature allows users to create their credentials and register for the web app. Use the provided SignUpForm class along with the signup.html template to collect user input.
 
-If the entered passwords match, generate a salted and hashed password using the bcrypt library. You can learn how to do this [here](https://pypi.org/project/bcrypt/).
+If the entered passwords match, generate a salted and hashed password using the bcrypt library. You can learn how to do this [here](https://pypi.org/project/bcrypt/). bcrypt requires the password argument passed to hashpw to be in bytes format. Therefore, make sure to encode the password string before hashing it.
 
 Next, store the user's information in the database by creating a new User object and persisting it using SQLAlchemy. Refer to the SQLAlchemy [session documentation](https://docs.sqlalchemy.org/en/20/orm/session_basics.html) for guidance.
 
